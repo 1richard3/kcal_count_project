@@ -1,0 +1,36 @@
+body{
+    background-color: rgba($color: #c6a992, $alpha: 0.2);
+}
+
+.second-top{
+    width: 782px;
+    height: 167px;
+    position: absolute;
+    top: 81px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.ul{
+    list-style-type: none;
+}
+
+.choose-top {
+    cursor: pointer;
+    color: #876d5a;
+    font-size: 1.7em;
+    z-index: 999;
+    position: absolute;
+    top: 167.5px;
+    left: 85.7%;
+}
+
+
+
+.second-choose-icon {
+    position: absolute;
+    top: 100px;
+    left: 80%;
+    width: 226px;
+    height: 136px;
+}

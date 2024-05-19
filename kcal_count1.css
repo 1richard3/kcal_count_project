@@ -51,7 +51,11 @@
 
 
 /* 性別按鈕擊點選後常駐變色 */
+<<<<<<< HEAD
 .boy{
+=======
+.boy-1{
+>>>>>>> c5cbd87a80baf530bda0147d6fd3703ded8098a4
     border: 2px solid #876d5a;
     display: inline-block;
     width: 45px;
@@ -65,11 +69,19 @@
     left: 43%;
 }
 
+<<<<<<< HEAD
 .boy.clicked{
     background-color: lightgreen;
 }
 
 .girl{
+=======
+.boy-1.clicked{
+    background-color: lightgreen;
+}
+
+.girl-0{
+>>>>>>> c5cbd87a80baf530bda0147d6fd3703ded8098a4
     border: 2px solid #876d5a;
     display: inline-block;
     width: 45px;
@@ -83,7 +95,11 @@
     left: 55%;
 }
 
+<<<<<<< HEAD
 .girl.clicked{
+=======
+.girl-0.clicked{
+>>>>>>> c5cbd87a80baf530bda0147d6fd3703ded8098a4
     background-color: lightgreen;
 }
 
@@ -158,6 +174,13 @@
     background-color: lightgreen;
 }
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> c5cbd87a80baf530bda0147d6fd3703ded8098a4
 .frequence{
     width: 690px;
     height: 30px;
@@ -201,6 +224,7 @@
     top: 800px;
     left: 0%;
     height: 40px;
+<<<<<<< HEAD
 }
 
 .remind{
@@ -215,4 +239,6 @@
 .remind:hover{
     color: blue;
     text-decoration: underline;
+=======
+>>>>>>> c5cbd87a80baf530bda0147d6fd3703ded8098a4
 }

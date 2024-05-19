@@ -1,0 +1,12 @@
+body {
+    background-color: rgba($color: #c6a992, $alpha: 0.2);
+}
+
+.forth-top{
+    width: 782px;
+    height: 167px;
+    position: absolute;
+    top: 81px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
