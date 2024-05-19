@@ -6,6 +6,11 @@ document.getElementById('showtdee').textContent = "一天的建議攝取熱量: 
 
 
 
+
+
+
+
+
 // 以下是全家的資料陣列------------------------------------------------------------------------------------------------------------------------------
 const xlsx = require('xlsx');
 const path = require('path');
@@ -29,12 +34,7 @@ const familymartarray = familymartdata.slice(1).map(item => ({
   }));
 // 以上是全家的資料陣列------------------------------------------------------------------------------------------------------------------------------
 
-console.log('全家的資料陣列: ', familymartarray);
-
 // 以下是小七的資料陣列------------------------------------------------------------------------------------------------------------------------------
-
-// const xlsx = require('xlsx');
-// const path = require('path');
 
 // 讀取 Excel 文件
 const sevenfilePath = path.resolve('C:/xampp/htdocs/kcal_count/7-11.xlsx');
@@ -55,7 +55,31 @@ const sevenarray = sevendata.slice(1).map(item => ({
   }));
 // 以上是小七的資料陣列------------------------------------------------------------------------------------------------------------------------------
 
-console.log('小七的資料陣列: ', sevenarray);
+
+// 以下是ok的資料陣列------------------------------------------------------------------------------------------------------------------------------
+
+// 讀取 Excel 文件
+const okfilePath = path.resolve('C:/xampp/htdocs/kcal_count/ok.xlsx');
+const okworkbook = xlsx.readFile(okfilePath);
+
+// 選擇要讀取的工作表
+const oksheetName = okworkbook.SheetNames[0]; // 讀取第一個工作表
+const okworksheet = okworkbook.Sheets[oksheetName];
+
+// 將工作表轉換為 JSON 格式
+const okdata = xlsx.utils.sheet_to_json(okworksheet, { header: 1 });
+
+const okarray = okdata.slice(1).map(item => ({
+    "商店": item[0],
+    "品名": item[1],
+    "價格": item[2],
+    "熱量": item[3]
+  }));
+// 以上是ok的資料陣列------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 
 
 

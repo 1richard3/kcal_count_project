@@ -1,4 +1,3 @@
-
 var genderfactor=0;
 var exerciselevel=0;
 var BMR=0;
@@ -62,11 +61,12 @@ function submitdataform(){
 
     TDEE=parseFloat(10*BMR*(1+exerciselevel)/9);
     TDEE = parseFloat(TDEE.toFixed(1));
-    
+
     localStorage.setItem('outputtdee', TDEE);
 
     window.location.href="http://127.0.0.1:5500/kcal_count2.html"
 }
+
 
 
 
