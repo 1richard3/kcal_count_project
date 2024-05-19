@@ -1,0 +1,291 @@
+body {
+    background-color: rgba($color: #c6a992, $alpha: 0.2);
+}
+
+//第一頁-----------------------------------------------------------------
+
+.first-top{
+    width: 416px;
+    height: 170px;
+    position: absolute;
+    top: 81px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.first-mid{
+    position: absolute;
+    top: 370px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 794px;
+    height: 418px;
+}
+
+
+.input-form1{
+    border: 2px solid #876d5a;
+    width: 378px;
+    height: 48px;
+    position: absolute;
+    top: 315px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.input-form2{
+    border: 2px solid #876d5a;
+    width: 378px;
+    height: 48px;
+    position: absolute;
+    top: 405px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.input-form3{
+    border: 2px solid #876d5a;
+    width: 378px;
+    height: 48px;
+    position: absolute;
+    top: 495px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.gender-button1{
+    border: 2px solid #876d5a;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: white;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 195px;
+    left: 43%;
+    
+}
+
+.gender-button2{
+    border: 2px solid #876d5a;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: white;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 195px;
+    left: 55%;
+    
+}
+
+.exercise-frequence{
+    //width: 302px;
+    //height: 45px;
+    position: absolute;
+    top: 610px;
+    left: 15%;
+    color: #876d5a;
+    font-size: 2em;
+}
+
+.arrow{
+    position: absolute;
+    top: 680px;
+    left: 25%;
+    width: 800px;
+    height: 30px;
+}
+
+.arrow-button{
+    width: 650px;
+    height: 30px;
+    position: absolute;
+    top: 680px;
+    left: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.seldom-button{
+    border: 2px solid #876d5a;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    
+}
+
+.seldom-button{
+    border: 3px solid #876d5a;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    
+}
+
+.often-button{
+    border: 3px solid #876d5a;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    
+}
+
+.usually-button{
+    border: 3px solid #876d5a;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    
+}
+
+.always-button{
+    border: 3px solid #876d5a;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+}
+
+.frequence{
+    width: 690px;
+    height: 30px;
+    position: absolute;
+    top: 730px;
+    left: 29%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.times{
+    color: #876d5a;
+    font-size: 2em;
+    //transform: translate(-50%,-50%);
+}
+
+.first-sure{
+    width: 100px;
+    height: 70px;
+    border-radius: 20px;
+    background-color: rgba($color: #c6a992, $alpha: 0.2);
+    border: 3px solid #876d5a;
+    color: #876d5a;
+    font-size: 2em;
+    position: absolute;
+    top: 660px;
+    left: 85%;
+}
+
+.foot{
+    position: absolute;
+    width: 100%;
+    top: 800px;
+    left: 0%;
+    height: 40px;
+}
+
+
+//第二頁---------------------------------------------------------
+
+body{
+    background-color: rgba($color: #c6a992, $alpha: 0.2);
+}
+
+.second-top{
+    width: 782px;
+    height: 167px;
+    position: absolute;
+    top: 81px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.ul{
+    list-style-type: none;
+}
+
+.choose-top {
+    cursor: pointer;
+    color: #876d5a;
+    font-size: 1.7em;
+    z-index: 999;
+    position: absolute;
+    top: 167.5px;
+    left: 85.7%;
+}
+
+.second-choose-icon {
+    position: absolute;
+    top: 100px;
+    left: 80%;
+    width: 226px;
+    height: 136px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
