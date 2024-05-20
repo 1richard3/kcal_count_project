@@ -1,0 +1,213 @@
+/* 標題 */
+.first-top{
+    width: 416px;
+    height: 170px;
+    position: absolute;
+    top: 81px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* 表單底圖 */
+.first-mid{
+    position: absolute;
+    top: 370px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 794px;
+    height: 418px;
+}
+
+
+.input-form1{
+    border: 2px solid #876d5a;
+    width: 378px;
+    height: 48px;
+    position: absolute;
+    top: 315px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.input-form2{
+    border: 2px solid #876d5a;
+    width: 378px;
+    height: 48px;
+    position: absolute;
+    top: 405px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.input-form3{
+    border: 2px solid #876d5a;
+    width: 378px;
+    height: 48px;
+    position: absolute;
+    top: 495px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+/* 性別按鈕擊點選後常駐變色 */
+.boy{
+    border: 2px solid #876d5a;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: white;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 195px;
+    left: 43%;
+}
+
+.boy.clicked{
+    background-color: lightgreen;
+}
+
+.girl{
+    border: 2px solid #876d5a;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: white;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 195px;
+    left: 55%;
+}
+
+.girl.clicked{
+    background-color: lightgreen;
+}
+
+
+.exercise-frequence {
+    position: absolute;
+    top: 610px;
+    left: 15%;
+    color: #876d5a;
+    font-size: 2em;
+}
+
+/* 箭頭線 */
+.arrow{
+    position: absolute;
+    top: 680px;
+    left: 25%;
+    width: 800px;
+    height: 30px;
+}
+
+.arrow_button{
+    width: 650px;
+    height: 30px;
+    position: absolute;
+    top: 680px;
+    left: 30.5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 頻率按鈕及點選後常駐變色 */
+.light-button{
+    border: 3px solid #876d5a;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    
+}
+
+.light-button.clicked{
+    background-color: lightgreen;
+}
+
+.medium-button{
+    border: 3px solid #876d5a;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    
+}
+
+.medium-button.clicked{
+    background-color: lightgreen;
+}
+
+.heavy-button{
+    border: 3px solid #876d5a;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    
+}
+
+.heavy-button.clicked{
+    background-color: lightgreen;
+}
+
+.frequence{
+    width: 690px;
+    height: 30px;
+    position: absolute;
+    top: 730px;
+    left: 29%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.times{
+    color: #876d5a;
+    font-size: 2em;
+    //transform: translate(-50%,-50%);
+}
+
+/* 確認鍵 */
+.first-sure{
+    width: 100px;
+    height: 70px;
+    border-radius: 20px;
+    background-color: rgba($color: #c6a992, $alpha: 0.2);
+    border: 3px solid #876d5a;
+    color: #876d5a;
+    font-size: 2em;
+    position: absolute;
+    top: 660px;
+    left: 85%;
+}
+
+.first-sure:hover{
+    color: white ;
+    background-color: #876d5a;
+    border: 3px solid white;
+}
+
+/* 底部留空間 */
+.first-foot{
+    position: absolute;
+    width: 100%;
+    top: 800px;
+    left: 0%;
+    height: 40px;
+}
+
+.remind{
+    color: #876d5a;
+    font-size: 1.5em;
+    position:absolute;
+    top: 550px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}

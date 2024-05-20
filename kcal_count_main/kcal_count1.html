@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="student" content="111403549 呂紹晨">
+    <title> kcal_count presrent1 </title>
+    <!-- <link rel="stylesheet" href="./stylesheets/all.css" > -->
+    <link rel="stylesheet" href="kcal_count1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</head>
+
+<style>
+    body {
+        background-color: rgba(198, 169, 146, 0.2); /* 使用 rgba 來設定顏色和透明度 */
+    }
+</style>
+
+<body>
+
+    <div class="container-intro text-center">
+        <div class="row">
+            <!-- 分塊2 -->
+            <div class="col-sm-2"></div>
+
+
+            <!-- 分塊8 -->
+            <div class="col-sm-8">
+
+                <!-- <from class="data-form" action="http://localhost:8080/kcal_count/kcal_count2.html" method="get"> -->
+
+                    <!-- 上標 -->
+                    <div>
+                        <img src="./elements/Group 1.png" class="first-top" >
+                    </div>
+
+                    <!-- 問卷底圖(包含性別按鈕和輸入資料) -->
+                    <div>
+
+                        <img src="./elements/Group 2.png" class="first-mid" >
+
+                        <!-- 性別按鈕 -->
+                        <div class="gender">
+                            <button class="boy" value="66.5" onclick="toogleGenderButtonStyle('boy')" ></button>
+                            <button class="girl" value="65.5" onclick="toogleGenderButtonStyle('girl')" ></button>
+                        </div>
+
+                        <!-- 輸入資料 -->
+                        <label><input type="number" id="age" class="input-form1" required step="1" placeholder="請輸入整數"></label><br><br>
+                        <label><input type="number" id="height" class="input-form2" required placeholder="請輸入到小數點後一位"></label><br><br>
+                        <label><input type="number" id="weight" class="input-form3" required placeholder="請輸入到小數點後一位"></label>
+
+                    </div>
+
+
+                    <b class="exercise-frequence">一天的運動程度: </b><br>
+                    <a href="http://127.0.0.1:5500/kcal_count4.html"><b class="remind">若不填寫本頁資料可點擊這裡跳過</b></a>
+
+
+
+                    <!-- 箭頭線 -->
+                    <div>
+                        <img src="./elements/Arrow 2.png" class="arrow">
+                    </div>
+
+                    <!-- 運動頻率選擇按鈕 -->
+                    <div class="arrow_button">
+                        <button class="light-button" value="0.35" onclick="toogleExerciseIntensityButton('light-button')"></button>
+                        <button class="medium-button" value="0.5" onclick="toogleExerciseIntensityButton('medium-button')"></button>
+                        <button class="heavy-button" value="1" onclick="toogleExerciseIntensityButton('heavy-button')"></button>
+                    </div>
+
+                    <!-- 運動頻率敘述 -->
+                    <div class="frequence">
+                        <b class="times">輕度</b>
+                        <b class="times">中度</b>
+                        <b class="times">重度</b>
+                    </div>
+
+                    <!-- 確認按鈕 -->
+                    <button type="button" class="first-sure" onclick="submitFormDataAndRedirect()"><b>確認</b></button>
+
+                <!-- </from> -->
+
+                <!-- 最底下留空間 -->
+                <div class="first-foot"></div>
+
+
+
+            </div>
+            <!-- col-sm-8 -->
+
+            <!-- 分塊2 -->
+            <div class="col-sm-2"></div>
+
+
+        </div>
+        <!-- row -->
+
+    </div> 
+    <!-- container -->
+
+    <script src="kcal_count1.js"></script>
+
+
+
+
+</body>
+</html>
