@@ -1,3 +1,4 @@
+
 var genderfactor=0;
 var exerciselevel=0;
 var BMR=0;
@@ -5,7 +6,7 @@ var TDEE=0;
 
 
 // 性別單選器
-function gendertooglecolor(selectgender) {
+function toogleGenderButtonStyle(selectgender) {
     const boyButton = document.querySelector(".boy");
     const girlButton = document.querySelector(".girl");
 
@@ -21,7 +22,7 @@ function gendertooglecolor(selectgender) {
 }
 
 // 運動頻率單選器
-function arrowtooglecolor(frequence) {
+function toogleExerciseIntensityButton(frequence) {
     const lightbutton = document.querySelector(".light-button");
     const mediumbutton = document.querySelector(".medium-button");
     const heavybutton = document.querySelector(".heavy-button");
@@ -47,7 +48,7 @@ function arrowtooglecolor(frequence) {
 
 }
 
-function submitdataform(){
+function submitFormDataAndRedirect(){
     var Age=parseFloat(document.getElementById("age").value) ;
     var Height=document.getElementById("height").value;
     var Weight=document.getElementById("weight").value;
@@ -64,11 +65,5 @@ function submitdataform(){
 
     localStorage.setItem('outputtdee', TDEE);
 
-    window.location.href="http://127.0.0.1:5500/kcal_count2.html"
+    window.location.href="./kcal_count2.html"
 }
-
-
-
-
-
-

@@ -29,22 +29,22 @@
             <!-- 分塊8 -->
             <div class="col-sm-8">
 
-                <!-- <from class="data-form" action="http://localhost:8080/kcal_count/kcal_count2.html" method="get"> -->
+                <!-- <from class="data-form" action="./kcal_count2.html" method="get"> -->
 
                     <!-- 上標 -->
                     <div>
-                        <img src="Group 1.png" class="first-top" >
+                        <img src="../elements/Group 1.png" class="first-top" >
                     </div>
 
                     <!-- 問卷底圖(包含性別按鈕和輸入資料) -->
                     <div>
 
-                        <img src="Group 2.png" class="first-mid" >
+                        <img src="../elements/Group 2.png" class="first-mid" >
 
                         <!-- 性別按鈕 -->
                         <div class="gender">
-                            <button class="boy" value="66.5" onclick="gendertooglecolor('boy')" ></button>
-                            <button class="girl" value="65.5" onclick="gendertooglecolor('girl')" ></button>
+                            <button class="boy" value="66.5" onclick="toogleGenderButtonStyle('boy')" ></button>
+                            <button class="girl" value="65.5" onclick="toogleGenderButtonStyle('girl')" ></button>
                         </div>
 
                         <!-- 輸入資料 -->
@@ -56,20 +56,20 @@
 
 
                     <b class="exercise-frequence">一天的運動程度: </b><br>
-                    <a href="http://127.0.0.1:5500/kcal_count4.html"><b class="remind">若不填寫本頁資料可點擊這裡跳過</b></a>
+                    <a href="./kcal_count4.html"><b class="remind">若不填寫本頁資料可點擊這裡跳過</b></a>
 
 
 
                     <!-- 箭頭線 -->
                     <div>
-                        <img src="Arrow 2.png" class="arrow">
+                        <img src="../elements/Arrow 2.png" class="arrow">
                     </div>
 
                     <!-- 運動頻率選擇按鈕 -->
                     <div class="arrow_button">
-                        <button class="light-button" value="0.35" onclick="arrowtooglecolor('light-button')"></button>
-                        <button class="medium-button" value="0.5" onclick="arrowtooglecolor('medium-button')"></button>
-                        <button class="heavy-button" value="1" onclick="arrowtooglecolor('heavy-button')"></button>
+                        <button class="light-button" value="0.35" onclick="toogleExerciseIntensityButton('light-button')"></button>
+                        <button class="medium-button" value="0.5" onclick="toogleExerciseIntensityButton('medium-button')"></button>
+                        <button class="heavy-button" value="1" onclick="toogleExerciseIntensityButton('heavy-button')"></button>
                     </div>
 
                     <!-- 運動頻率敘述 -->
@@ -80,7 +80,7 @@
                     </div>
 
                     <!-- 確認按鈕 -->
-                    <button type="button" class="first-sure" onclick="submitdataform()"><b>確認</b></button>
+                    <button type="button" class="first-sure" onclick="submitFormDataAndRedirect()"><b>確認</b></button>
 
                 <!-- </from> -->
 
