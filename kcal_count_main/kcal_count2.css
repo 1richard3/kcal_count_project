@@ -1,18 +1,76 @@
-body{
-    background-color: rgba($color: #c6a992, $alpha: 0.2);
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
 }
 
-.second-top{
+.container-all {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.container-left {
+    background-color: #dabea7;
+    width: 250px;
+    height: 100vh;
+    padding: 0;
+    position: fixed; /* 固定 sidebar */
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+.container-right {
+    background-color: rgba(198, 169, 146, 0.2);
+    flex-grow: 1;
+    padding: 10px;
+    margin-left: 250px;
+}
+
+.fa-cart-shopping {
+    font-size: 100px;
+    color: #000;
+    margin: 30px auto; /* 確保圖標在父容器中居中 */
+}
+
+.top-name {
+    text-align: center;
+    font-size: 30px;
+    font-style: italic;
+}
+
+ul.list-unstyled {
+    padding-left: 15px; /* 向右移動15px */
+    margin: 0;
+    list-style-type: none;
+    text-align: left; /* 確保項目文字從左到右排列 */
+}
+
+ul.list-unstyled li {
+    padding-left: 0;
+}
+
+li.list-unstyled p.list-item {
+    padding-left: 0; /* 保持項目文字從左邊開始 */
+}
+
+.second-top {
     width: 782px;
     height: 167px;
-    position: absolute;
+    position: relative;
     top: 81px;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
-.ul{
-    list-style-type: none;
+.second-choose-icon {
+    position: absolute;
+    top: 100px;
+    left: 80%;
+    width: 226px;
+    height: 136px;
 }
 
 .choose-top {
@@ -25,12 +83,36 @@ body{
     left: 85.7%;
 }
 
+.introduce:hover {
+    color: blue;
+    text-decoration: underline;
+}
 
-
-.second-choose-icon {
+.card {
+    width: 18rem;
+    height: 23rem;
     position: absolute;
-    top: 100px;
-    left: 80%;
-    width: 226px;
-    height: 136px;
+    top: 300px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-color: #876d5a;
+    border-radius: 10px;
+}
+
+.select li:hover > ul.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+    top: 0%;
+    right: 100%;
+    margin-top: -10px;
+}
+
+.dropdown-menu > li > a:hover:after {
+    transform: rotate(90deg);
 }
