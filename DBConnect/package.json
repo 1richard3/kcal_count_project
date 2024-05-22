@@ -1,0 +1,14 @@
+{
+    "name": "connection",
+    "version": "1.0.0",
+    "description": "DBConnection.js",
+    "scripts": {
+        "test": "echo \"Errpr: no test specified\" && exit 1"
+    },
+    "keyword": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "mysql": "^2.18.1"
+    }
+}
