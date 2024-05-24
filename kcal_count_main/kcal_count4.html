@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
@@ -12,7 +13,6 @@
 
 </head>
 
-
 <style>
     body {
         background-color: rgba(198, 169, 146, 0.2); /* 使用 rgba 來設定顏色和透明度 */
@@ -24,26 +24,63 @@
     <div>
         <img src="../elements/Group 6.png" class="forth-top">
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <div class="container">
+        <div class="button-container">      <!--按鈕連回前一頁-->
+            <button class="btn btn-primary">
+                <img src="../elements/return.png" class="return-img" alt="圖片">
+                看看其他食物
+            </button>
+        </div>
+        <div>
+            <img src="" alt="請放飯糰" class="product-image">  <!--這裡圖片要從後端輸入-->
+            <p class="image-description">【商品名稱】：<br>
+                                         【價格】：<br>
+                                         【便利商店】：<br>
+                                         【熱量】：</p>
+                                         <!--這裡後面內容要從後端輸入-->
+        </div>
+        <div class="scrollable-table">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">
+                            <img src="../elements/fire.jpg" alt="Image Description" class="header-image">
+                            有6個人也喜歡這個食物!
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--評論要不要從後端輸入自行斟酌-->
+                    <tr>
+                        <td><span class="circle" ></span> 便宜，而且餡料超多</td>
+                    </tr>
+                    <tr>
+                        <td><span class="circle" ></span> 不推，有種怪味</td>
+                    </tr>
+                    <tr>
+                        <td><span class="circle" ></span> 我覺得不好吃.....</td>
+                    </tr>
+                    <tr>
+                        <td><span class="circle" ></span> 全家抹茶麵包好吃</td>
+                    </tr>
+                    <tr>
+                        <td><span class="circle" ></span> 我想吃海底撈</td>
+                    </tr>
+                    <tr>
+                        <td><span class="circle" ></span> 7-11新口味冰淇凌好吃</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="input-container">   <!--這裡讓人可以輸入評論-->
+            <input 
+                class="input-comment"
+                type="text" 
+                id="user-input" 
+                name="user-input" 
+                placeholder="輸入你的評論..."
+            >
+        </div>
+    </div>
 </body>
 </html>

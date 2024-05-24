@@ -50,14 +50,17 @@ function toogleExerciseIntensityButton(frequence) {
 
 function submitFormDataAndRedirect(){
     var Age=parseFloat(document.getElementById("age").value) ;
+    Age=parseFloat(Age);
     var Height=document.getElementById("height").value;
+    Height=parseFloat(Height);
     var Weight=document.getElementById("weight").value;
+    Weight=parseFloat(Weight);
 
     if(genderfactor===66.5){
-        BMR=66.5+(13.7*Weight)+(5*Height)-(6.8*Age);
+        BMR=parseFloat(66.5+(13.7*Weight)+(5*Height)-(6.8*Age));
     }
     else if(genderfactor===65.5){
-        BMR=65.5+(9.6*Weight)+(1.8*Height)-(4.7*Age);
+        BMR=parseFloat(65.5+(9.6*Weight)+(1.8*Height)-(4.7*Age));
     }
 
     TDEE=parseFloat(10*BMR*(1+exerciselevel)/9);

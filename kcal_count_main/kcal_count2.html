@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
@@ -17,14 +18,14 @@
         <div>
             <img src="../elements/Group 4.png" class="second-choose-icon">
         </div>
-
+       <!--後端輸入-->
         <div class="container-left">
             <!-- 導覽列 -->
             <nav id="sidebar">
                 <i class="fa-solid fa-cart-shopping cart-icon"></i><br>
                 <!-- list 列表 -->
                 <ul class="list-unstyled">
-                    <b class="top-name">購物車</b><br>
+                    <b class="top-name">To eat list</b><br><br>
                     <li>
                         <p class="list-item">價格: </p>
                     </li>    
@@ -33,6 +34,9 @@
                     </li>
                     <li>
                         <p class="list-item">數量: </p>
+                    </li>
+                    <li>
+                        <b class="list-item tdee">TDEE建議一天的熱量: </b>
                     </li>
                 </ul>
             </nav>
@@ -75,19 +79,22 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card">     
+                <!--這裡後端要寫-->
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">食品名稱: </h5>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">商店: </li>
-                    <li class="list-group-item">價格: </li>
-                    <li class="list-group-item">熱量: </li>
+                    <li class="list-group-item">價格:熱量:</li>
+                    <li class="list-group-item" 
+                        style="display: flex; 
+                               align-items: center;"> 
+                        <a href="./kcal_count4.html">See more...</a>
+                    </li>
+               
                 </ul>
-                <div class="card-body">
-                    <a href="./kcal_count4.html"><b class="introduce">食物介紹</b></a>
-                </div>
             </div>
         </div>
     </div>
