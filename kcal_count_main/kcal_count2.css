@@ -1,0 +1,186 @@
+
+/* .container-all {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    height: auto;
+} */
+
+.container-left {
+    background-color: #dabea7;
+    width: 250px;
+    height: 100vh;
+    padding: 0;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+/* .container-right {
+    background-color: rgba(198, 169, 146, 0.2);
+    margin-left: 250px;
+    padding: 10px; 
+    width: calc(100% - 250px);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column; 
+    z-index: 998;
+}  */
+
+.card {
+    flex: 1 1 calc(25% - 16px);
+    width: 250px; 
+    height: 200px;
+    border:2px solid #876d5a4d !important;
+    border-color: #876d5a;
+    border-radius: 10px;
+    display: flex; 
+    flex-direction: column; /* 垂直方向排列 */
+    /* gap: 16px; 設置列之間的間距 */
+    margin-bottom: 16px; /* 卡片之间的垂直间距 */
+    z-index: 999; 
+    margin: 10px; 
+    
+}
+
+.card img {
+    width: 50%;
+    height: 50%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.container-card{
+    position: absolute;
+    top: 225px;
+    width: 1200px;
+    height: auto;
+    left: 250px;
+    z-index: 999;
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 16px; 
+    width: calc(100% - 250px); 
+    z-index: -999;
+} 
+
+
+
+.fa-cart-shopping {
+    font-size: 100px;
+    color: #000;
+    margin: 30px auto; /* 確保圖標在父容器中居中 */
+}
+
+.top-name {
+    text-align: center;
+    font-size: 30px;
+    font-style: italic;
+}
+
+ul.list-unstyled {
+    padding-left: 15px; /* 向右移動15px */
+    margin: 0;
+    list-style-type: none;
+    text-align: left; /* 確保項目文字從左到右排列 */
+}
+
+ul.list-unstyled li {
+    padding-left: 0;
+}
+
+li.list-unstyled p.list-item {
+    padding-left: 0; /* 保持項目文字從左邊開始 */
+}
+
+.second-top {
+    width: 782px;
+    height: 167px;
+    position: absolute;
+    top: 81px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+
+.second-choose-icon {
+    position: absolute;
+    top: 100px;
+    left: 83%;
+    width: 226px;
+    height: 136px;
+}
+
+.choose-top {
+    cursor: pointer;
+    color: #876d5a;
+    font-size: 1.7em;
+    z-index: 998;
+    position: absolute;
+    top: 167.5px;
+    left: 88.7%;
+}
+
+.introduce:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.select li:hover > ul.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+    top: 0%;
+    right: 100%;
+    margin-top: -10px;
+}
+
+.dropdown-menu > li > a:hover:after {
+    transform: rotate(90deg);
+}
+
+
+.card-title{
+    color: #876d5a !important;
+}
+
+.see-more-card{
+    color: #876d5a;
+}
+
+.list-group-item{
+    color: #876d5a !important;
+}
+
+.list-group-item2{
+    color: #876d5a !important;
+    list-style-type: none;
+    margin-left: 15px;
+}
+
+.list-seeMore {
+    list-style-type: none;
+    margin-left: auto;
+    border: none !important; 
+    margin-right: 20px;
+}
+
+.seeMore{
+    color:#876d5a87;
+    text-decoration: none;
+}
+
+.seeMore:hover{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.list-group.list-group-flush .list-group-item2 {
+    border: none;
+}
