@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="student" content="111403549 呂紹晨">
+    <title>kcal_count presrent2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="kcal_count2.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<style>
+    body {
+        background-color: rgba(198, 169, 146, 0.2); /* 使用 rgba 來設定顏色和透明度 */
+        z-index: 999;
+    }
+</style>
+
+<body>
+    <div class="container-all">
+        
+       <!--後端輸入-->
+        <div class="container-left">
+            <!-- 導覽列 -->
+            <nav id="sidebar">
+                <i class="fa-solid fa-cart-shopping cart-icon"></i><br>
+                <!-- list 列表 -->
+                <ul class="list-unstyled">
+                    <b class="top-name">To eat list</b><br><br>
+                    <li>
+                        <p class="list-item">價格: </p>
+                    </li>    
+                    <li>
+                        <p class="list-item">熱量: </p>
+                    </li>
+                    <li>
+                        <p class="list-item">數量: </p>
+                    </li>
+                    <li>
+                        <b class="list-item tdee">TDEE建議一天的熱量: </b>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        
+            <div>
+                <img src="../elements/Group 4.png" class="second-choose-icon">
+            </div>
+
+            <b id="showtdee"></b>
+            
+            <!-- 標題 -->
+            <div>
+                <img src="../elements/Group 3.png" class="second-top">
+            </div>
+
+            <!-- 篩選依據 -->
+            <div class="select">
+                <div class="collapse-choose-list" id="choose-list-item">
+                    <ul class="choose-item-dropdown">
+                        <b class="choose-top dropdown-toggle" data-bs-toggle="dropdown" href="#">篩選依據</b>
+                        <!-- 下拉式選單 -->
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">價格低到高</a></li>
+                            <li><a class="dropdown-item" href="#">價格高到低</a></li>
+                            <li><a class="dropdown-item" href="#">熱量低到高</a></li>
+                            <li><a class="dropdown-item" href="#">熱量高到低</a></li>
+                            <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">商店</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">全家</a></li>
+                                    <li><a class="dropdown-item" href="#">7-11</a></li>
+                                    <li><a class="dropdown-item" href="#">OK</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">食物種類</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">麵</a></li>
+                                    <li><a class="dropdown-item" href="#">飯</a></li>
+                                    <li><a class="dropdown-item" href="#">飯糰</a></li>
+                                    <li><a class="dropdown-item" href="#">麵包</a></li>
+                                    <li><a class="dropdown-item" href="#">肉</a></li>
+                                    <li><a class="dropdown-item" href="#">漢堡</a></li>
+                                    <li><a class="dropdown-item" href="#">三明治</a></li>
+                                    <li><a class="dropdown-item" href="#">沙拉</a></li>
+                                    <li><a class="dropdown-item" href="#">湯</a></li>
+                                    <li><a class="dropdown-item" href="#">甜點</a></li>
+                                    <li><a class="dropdown-item" href="#">其他</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </ul> 
+                </div>
+            </div>
+        
+
+        <div class="container-card"></div>
+
+    </div>
+
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    
+
+    <!-- 各超商資料集合 -->
+        <script>
+            var okarray = [
+                { '商店': 'ok', '品名': '鐵道雞腿便當', '價格': 89, '熱量': 532 },
+                { '商店': 'ok', '品名': '熱炒沙茶牛肉燴飯', '價格': 79, '熱量': 513 },
+                { '商店': 'ok', '品名': '滑蛋牛肉燴飯', '價格': 79, '熱量': 472 },
+                { '商店': 'ok', '品名': '日式咖哩雞燴飯', '價格': 79, '熱量': 543 },
+                { '商店': 'ok', '品名': '紅燒牛肉燴飯', '價格': 79, '熱量': 528 },
+                { '商店': 'ok', '品名': '日式牛丼飯', '價格': 79, '熱量': 571 },
+                { '商店': 'ok', '品名': '麻婆豆腐燴飯', '價格': 65, '熱量': 426.4 },
+                { '商店': 'ok', '品名': '辣子雞丁炒飯', '價格': 79, '熱量': 697 },
+                { '商店': 'ok', '品名': '泰式打拋豬肉飯', '價格': 79, '熱量': 613 },
+                { '商店': 'ok', '品名': '歐巴炸雞泡菜炒飯', '價格': 79, '熱量': 655 },
+                { '商店': 'ok', '品名': '鐵道排骨便當', '價格': 89, '熱量': 607 },
+                { '商店': 'ok', '品名': 'OK choice筍香燜肉', '價格': 69, '熱量': 180 },
+                { '商店': 'ok', '品名': 'OK choice宮保雞丁', '價格': 69, '熱量': 228 },
+                { '商店': 'ok', '品名': 'OK choice黑胡椒牛腩', '價格': 69, '熱量': 153 },
+                { '商店': 'ok', '品名': 'OK choice日式咖哩牛腩', '價格': 69, '熱量': 201 },
+                { '商店': 'ok', '品名': 'OK choice東坡肉', '價格': 69, '熱量': 254 },
+                { '商店': 'ok', '品名': 'Q肉丁德國香腸(原味)', '價格': 32, '熱量': 131 },
+                { '商店': 'ok', '品名': 'Q肉丁德國香腸(香蒜口味)', '價格': 32, '熱量': 133 },
+                { '商店': 'ok', '品名': '滿漢嘟嘟好小香腸', '價格': 39, '熱量': 228 },
+                { '商店': 'ok', '品名': '新及第豬肉熟水餃', '價格': 49, '熱量': 486 },
+                { '商店': 'ok', '品名': '新及第小籠湯包', '價格': 49, '熱量': 364 },
+                { '商店': 'ok', '品名': '傳統雞肉飯', '價格': 48, '熱量': 609 },
+                { '商店': 'ok', '品名': '廣式皮蛋瘦肉粥', '價格': 55, '熱量': 212 },
+                { '商店': 'ok', '品名': '胡桃木香燻雞胸肉', '價格': 99, '熱量': 214 },
+                { '商店': 'ok', '品名': '迷迭香雞胸肉', '價格': 99, '熱量': 214 },
+                { '商店': 'ok', '品名': '愛麵族-香菇肉燥', '價格': 35, '熱量': 352 },
+                { '商店': 'ok', '品名': '愛麵族-什錦海鮮', '價格': 35, '熱量': 300 },
+                { '商店': 'ok', '品名': '爽口烏龍麵-柴魚風味', '價格': 69, '熱量': 330 },
+                { '商店': 'ok', '品名': '爽口烏龍麵-辣味', '價格': 69, '熱量': 340 },
+                { '商店': 'ok', '品名': '爽口烏龍麵-海苔風味', '價格': 69, '熱量': 330 },
+                { '商店': 'ok', '品名': '紐澳良烤雞三角飯糰', '價格': 33, '熱量': 295 },
+                { '商店': 'ok', '品名': '塩烤豚三角飯糰', '價格': 33, '熱量': 295 },
+                { '商店': 'ok', '品名': '龍蝦手捲', '價格': 39, '熱量': 242 },
+                { '商店': 'ok', '品名': '海苔雞排捲便當', '價格': 45, '熱量': 368 },
+                { '商店': 'ok', '品名': '炭火燒肉炒麵', '價格': 82, '熱量': 397 },
+                { '商店': 'ok', '品名': '經典義大利肉醬麵', '價格': 69, '熱量': 524 },
+                { '商店': 'ok', '品名': '起司燻雞義大利麵', '價格': 75, '熱量': 299 },
+                { '商店': 'ok', '品名': '大份麻醬涼麵', '價格': 49, '熱量': 399 },
+                { '商店': 'ok', '品名': '胡麻雞絲涼麵', '價格': 67, '熱量': 385 },
+                { '商店': 'ok', '品名': '山葵涼麵', '價格': 59, '熱量': 299 },
+                { '商店': 'ok', '品名': '沙茶牛肉炒麵', '價格': 75, '熱量': 645 },
+                { '商店': 'ok', '品名': '福記-紅豆湯', '價格': 59, '熱量': 254 },
+                { '商店': 'ok', '品名': '福記溫泉蛋', '價格': 45, '熱量': 126 },
+                { '商店': 'ok', '品名': '福記芋頭鹹粥', '價格': 69, '熱量': 172 },
+                { '商店': 'ok', '品名': '福記蒜頭雞湯', '價格': 69, '熱量': 312 },
+                { '商店': 'ok', '品名': '福記竹筍雞湯', '價格': 69, '熱量': 164 },
+                { '商店': 'ok', '品名': '福記香菇肉粥', '價格': 69, '熱量': 190 },
+                { '商店': 'ok', '品名': '呷七碗油飯', '價格': 55, '熱量': 658 },
+                { '商店': 'ok', '品名': '呷七碗炒炊粉', '價格': 55, '熱量': 782 },
+                { '商店': 'ok', '品名': 'JIF花生醬菠蘿麵包', '價格': 35, '熱量': 489 },
+                { '商店': 'ok', '品名': 'JIF花生醬墨西哥麵包', '價格': 35, '熱量': 418 },
+                { '商店': 'ok', '品名': 'JIF花生醬蛋糕', '價格': 35, '熱量': 380 },
+                { '商店': 'ok', '品名': '岩島成-花生麵包', '價格': 35, '熱量': 434 },
+                { '商店': 'ok', '品名': '岩島成-自慢職人奶酥麵包', '價格': 35, '熱量': 429 },
+                { '商店': 'ok', '品名': '岩島成-紅豆麻糬麵包', '價格': 35, '熱量': 382 },
+                { '商店': 'ok', '品名': '岩島成-雙倍超柔吐司', '價格': 49, '熱量': 341 },
+                { '商店': 'ok', '品名': '南瓜子核桃熟麩麵包', '價格': 38, '熱量': 340 },
+                { '商店': 'ok', '品名': '芝麻捲花熟麩麵包', '價格': 38, '熱量': 359 },
+                { '商店': 'ok', '品名': '奶酥蔓越莓熟麩麵包', '價格': 38, '熱量': 480 },
+                { '商店': 'ok', '品名': '特濃咖哩雞肉飯', '價格': 75, '熱量': 603 },
+                { '商店': 'ok', '品名': '青醬干貝鮮蝦焗麵', '價格': 75, '熱量': 320 },
+                { '商店': 'ok', '品名': '揚州碎金蝦仁炒飯', '價格': 75, '熱量': 538 },
+                { '商店': 'ok', '品名': '和風柴魚雞肉炒飯', '價格': 75, '熱量': 548 },
+                { '商店': 'ok', '品名': '雙醬明太子義大利麵', '價格': 75, '熱量': 308 },
+                { '商店': 'ok', '品名': '大份量麻醬涼麵(升級版)', '價格': 59, '熱量': 411 },
+                { '商店': 'ok', '品名': '燻雞麻醬涼麵', '價格': 69, '熱量': 677 },
+                { '商店': 'ok', '品名': '椒香麻醬涼麵', '價格': 69, '熱量': 627 }
+            ];
+
+            var foods = [
+                {foodID:207,name:"LADEARS生乳半月燒",Kcal:185,price:42,kind:"甜點",cs:"seven",like:4,img:"https://drive.google.com/file/d/19iZaGNi53KyDagD6i3ZDsNd4sSKOCcF9/view?usp=drive_link"},
+                {foodID:208,name:"LADEARS爆餡羅馬生乳包",Kcal:260,price:65,kind:"甜點",cs:"OK",like:11,img:"https://drive.google.com/file/d/1gpRpeyQtrA-XJDcgNbK-ii4OpxqQkW1D/view?usp=drive_link"},
+                {foodID:209,name:"LADEARS提拉米蘇蛋糕杯",Kcal:198,price:59,kind:"甜點",cs:"OK",like:5,img:"https://drive.google.com/file/d/1huEW8KT4CFrIb6l9c7VgHuOnXFH_Iaet/view?usp=drive_link"},
+                {foodID:210,name:"LADEARS巴斯克乳酪蛋糕",Kcal:210.3,price:55,kind:"甜點",cs:"seven",like:0,img:"https://drive.google.com/file/d/1Hbd5vqYDtbLcGUOlSqNms3bZ9juSorYb/view?usp=drive_link"},
+                {foodID:211,name:"LADEARS法式檸檬塔",Kcal:283,price:49,kind:"甜點",cs:"seven",like:3,img:"https://drive.google.com/file/d/1lWbyCPVK7P6Psrh0utNC9s-g-tKXGJ_D/view?usp=drive_link"},
+                {foodID:212,name:"LADEARS焦糖德式布丁",Kcal:270,price:49,kind:"甜點",cs:"seven",like:0,img:"https://drive.google.com/file/d/13GkIW_QYpnGoPy-n8NHHnbuxnhR7qLAA/view?usp=drive_link"},
+                {foodID:213,name:"LADEARS黑森林蛋糕",Kcal:213.5,price:59,kind:"甜點",cs:"family",like:2,img:"https://drive.google.com/file/d/1RA_CexFph-n1W5qVJikHrdEiEGzDFyyi/view?usp=drive_link"},
+                {foodID:214,name:"LADEARS芋泥生乳捲",Kcal:252.3,price:65,kind:"甜點",cs:"family",like:88,img:"https://drive.google.com/file/d/1eU_84tF40IkXg86EeyKjT4LVp4XxfsQu/view?usp=drive_link"},
+]
+        </script>
+
+    <script src="kcal_count2.js"></script>
+</body>
+</html>
