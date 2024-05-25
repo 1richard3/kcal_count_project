@@ -33,3 +33,4 @@ connection.query($query, function(err, rows, fields){
 connection.end(function(){
     console.log("Connection closed");
 })  
+

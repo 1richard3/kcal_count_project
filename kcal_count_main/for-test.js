@@ -1,3 +1,61 @@
+
+
+// function generateCard(name, store, price, calories) {
+//   // 创建 card 元素
+//   const card = document.createElement('div');
+//   card.classList.add('card');
+
+//   // 图片
+//   const img = document.createElement('img');
+//   img.classList.add('card-img-top');
+//   img.src = ''; // 替換成圖片的URL
+//   img.alt = name;
+
+
+//   // card-body
+//   const cardBody = document.createElement('div');
+//   cardBody.classList.add('card-body');
+//   const cardTitle = document.createElement('h5');
+//   cardTitle.classList.add('card-title');
+//   cardTitle.textContent = '食品名稱: '+name;
+//   cardBody.appendChild(cardTitle);
+
+//   // list-group
+//   const listGroup = document.createElement('ul');
+//   listGroup.classList.add('list-group', 'list-group-flush');
+//   const storeItem = document.createElement('li');
+//   storeItem.classList.add('list-group-item');
+//   storeItem.textContent = '商店: '+store;
+//   const priceItem = document.createElement('li');
+//   priceItem.classList.add('list-group-item');
+//   priceItem.textContent = '價格: ' +price;
+//   const caloriesItem = document.createElement('li');
+//   caloriesItem.classList.add('list-group-item');
+//   caloriesItem.textContent = '熱量: ' +calories;
+//   const seeMoreItem = document.createElement('li');
+//   seeMoreItem.classList.add('list-group-item');
+//   seeMoreItem.style.display = 'flex';
+//   seeMoreItem.style.alignItems = 'center';
+//   const seeMoreLink = document.createElement('a');
+//   seeMoreLink.href = './kcal_count4.html';
+//   seeMoreLink.textContent = 'See more...';
+//   seeMoreItem.appendChild(seeMoreLink);
+
+//   listGroup.appendChild(storeItem);
+//   listGroup.appendChild(priceItem);
+//   listGroup.appendChild(caloriesItem);
+//   listGroup.appendChild(seeMoreItem);
+
+//   // 将所有元素添加到 card 中
+//   card.appendChild(img);
+//   card.appendChild(cardBody);
+//   card.appendChild(listGroup);
+
+//   // 返回 card 元素
+//   return card;
+// }
+
+
 // 以下是全家的資料陣列------------------------------------------------------------------------------------------------------------------------------
 const xlsx = require('xlsx');
 const path = require('path');
