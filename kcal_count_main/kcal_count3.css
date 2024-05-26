@@ -1,81 +1,191 @@
 body {
-    background-color: rgba(198, 169, 146, 0.2); /* 使用 rgba 來設定顏色和透明度 */
+    background-color: #c6a992;
 }
 
-
-.third-top{
+.forth-top{
     width: 782px;
     height: 167px;
     position: absolute;
     top: 81px;
     left: 50%;
     transform: translate(-50%,-50%);
-
 }
 
-.ul{
-    list-style-type: none;
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.choose-top {
-    cursor: pointer;
-    color: #876d5a;
-    font-size: 1.7em;
-    z-index: 999;
+.button-container {
     position: absolute;
-    top: 167.5px;
-    left: 85.7%;
+    top: 22%; 
+    right: 15%; 
+
+}
+
+.button-container button {
+    margin-right: 10px;
+    background-color: white;
+    color: #876D5A ;
+    font-size: 18px; 
+    border-radius: 50px; 
+    text-align: middle;
+    border: 2px solid #a48f8188 ;
+    width: 200px;
+    height:50px;
+}
+.button-container button:hover{
+    background-color: white;
+    border: 2px solid #a48f8188 ;
+    color: #876D5A ;
+}
+
+.return-img{
+    width: 30px;
+    height: auto;
 }
 
 
-
-.third-choose-icon {
+.product-image {
     position: absolute;
-    top: 100px;
-    left: 80%;
-    width: 226px;
-    height: 136px;
+    bottom: 50%;
+    left: 15%;
+    margin-bottom: 150px;
+    width:350px;
+    height:350px;
+    object-fit: contain;
 }
 
-.third-sure{
-    width: 100px;
-    height: 70px;
-    border-radius: 20px;
-    background-color: rgba($color: #c6a992, $alpha: 0.2);
-    border: 3px solid #876d5a;
-    color: #876d5a;
-    font-size: 2em;
+.image-description {
     position: absolute;
-    top: 660px;
-    left: 85%;
+    bottom: calc(10% + 10px); 
+    left: 15%;
+    font-size: 20px; 
+    color: #876D5A ;
+    text-align: left;
 }
 
-.third-sure:hover{
-    color: white ;
-    background-color: #876d5a;
-    border: 1px solid white;
+
+
+.header-image {
+    width: 130px;
+    height: auto; 
+    margin-right: 0x;
 }
 
-.third-foot{
+body {
+    background-color: #c6a992;
+}
+
+.forth-top{
+    width: 782px;
+    height: 167px;
     position: absolute;
-    width: 100%;
-    top: 800px;
-    left: 0%;
-    height: 40px;
+    top: 81px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.button-container {
+    position: absolute;
+    top: 22%; 
+    right: 15%; 
+
+}
+
+.button-container button {
+    margin-right: 10px;
+    background-color: white;
+    color: #876D5A ;
+    font-size: 18px; 
+    border-radius: 50px; 
+    text-align: middle;
+    border: 2px solid #a48f8188 ;
+    width: 200px;
+    height:50px;
+}
+.button-container button:hover{
+    background-color: white;
+    border: 2px solid #a48f8188 ;
+    color: #876D5A ;
+}
+
+.return-img{
+    width: 30px;
+    height: auto;
+}
+
+
+.product-image {
+    position: absolute;
+    bottom: 50%;
+    left: 15%;
+    margin-bottom: 150px;
+    width:350px;
+    height:350px;
+    object-fit: contain;
+}
+
+.image-description {
+    position: absolute;
+    bottom: calc(10% + 10px); 
+    left: 15%;
+    font-size: 20px; 
+    color: #876D5A ;
+    text-align: left;
 }
 
 
 
+.header-image {
+    width: 130px;
+    height: auto; 
+    margin-right: 0x;
+}
 
 
 
+.input-comment{
+    position: absolute;
+    bottom:5%;
+    right: 15%;
+    border-radius: 50px; 
+    text-align: middle;
+    width: 480px;
+    height:50px;
+    border: 2px solid #a48f8188;
+    padding-left:25px;
+}
 
+.input-comment:focus {
+    border-color: #a48f8188; 
+    outline: none;
+}
 
+.input-comment{
+    position: absolute;
+    bottom:5%;
+    right: 15%;
+    border-radius: 50px; 
+    text-align: middle;
+    width: 480px;
+    height:50px;
+    border: 2px solid #a48f8188;
+    padding-left:25px;
+}
 
-
-
-
-
-
-
-
+.input-comment:focus {
+    border-color: #a48f8188; 
+    outline: none;
+}

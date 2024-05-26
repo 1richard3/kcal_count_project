@@ -6,17 +6,6 @@
     height: auto;
 } */
 
-.container-left {
-    background-color: #dabea7;
-    width: 250px;
-    height: 100vh;
-    padding: 0;
-    position: fixed; 
-    top: 0;
-    left: 0;
-    text-align: center;
-}
-
 /* .container-right {
     background-color: rgba(198, 169, 146, 0.2);
     margin-left: 250px;
@@ -27,6 +16,20 @@
     flex-direction: column; 
     z-index: 998;
 }  */
+
+.container-left {
+    background-color: #dabea7;
+    width: 250px;
+    height: 100vh;
+    padding: 0;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: auto; /* 設置垂直滾動 */
+    border-color: #dabea7;
+}
 
 .card {
     flex: 1 1 calc(25% - 16px);
@@ -48,14 +51,12 @@
     position: relative;
 }
 
-
-
-
 .add-button{
     position: absolute;
     top: 10px;
     right: 10px;
 }
+
 
 .card img {
     width: 100%; /* 使圖片寬度適應容器寬度 */
@@ -78,14 +79,19 @@
     gap: 16px; 
     width: calc(100% - 250px); 
     z-index: -999;
+    
 } 
 
-
+.left-bottom{
+    width: 100%;
+    height: auto;
+}
 
 .fa-cart-shopping {
     font-size: 100px;
     color: #000;
     margin: 30px auto; /* 確保圖標在父容器中居中 */
+    
 }
 
 .top-name {
@@ -105,7 +111,7 @@ ul.list-unstyled li {
     padding-left: 0;
 }
 
-li.list-unstyled p.list-item {
+li.list-unstyled b.list-item {
     padding-left: 0; /* 保持項目文字從左邊開始 */
 }
 
@@ -200,7 +206,51 @@ li.list-unstyled p.list-item {
     border: none;
 }
 
-.add-to-shoppingcar{
+.add-to-shoppingcart{
     width: 10px;
     height: 10px;
+}
+
+/* cart */
+.container-left .shoppingcart {
+    margin-bottom: 16px; /* 卡片之间的垂直间距 */
+    background-color: #F6EFEA;
+    width: 250px;
+    height: 130px;
+    z-index: 999;
+}
+
+.container-left .quantity-container {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border: 1px solid #876d5a;
+    border-radius: 5px;
+    width: 100px;
+    border-color: #dabea7;
+    margin: auto;
+}
+
+.container-left .quantity-button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.container-left .quantity-input {
+    width: 40px;
+    text-align: center;
+    /* border: none; */
+    outline: none;
+    font-size: 18px;
+}
+
+.name-in-cart{
+    color: #876d5a;
+}
+
+.data-in-cart{
+    color: #876d5a;
 }
