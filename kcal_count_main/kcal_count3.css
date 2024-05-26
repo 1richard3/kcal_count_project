@@ -189,3 +189,22 @@ body {
     border-color: #a48f8188; 
     outline: none;
 }
+
+.addcomment{
+    width: 100px;
+    height: 70px;
+    border-radius: 20px;
+    background-color: rgba($color: #c6a992, $alpha: 0.2);
+    border: 3px solid #876d5a;
+    color: #876d5a;
+    font-size: 2em;
+    position: absolute;
+    top: 660px;
+    left: 85%;
+}
+
+.addcomment:hover{
+    color: white ;
+    background-color: #876d5a;
+    border: 3px solid white;
+}
