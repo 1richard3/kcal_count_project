@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8" />
+    <title>kcal_little_baby</title>
+    <link rel="stylesheet" href="kcal_littte_baby.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="container-all">
+        <div>
+            <img src="../elements/Group 4.png" class="second-choose-icon">
+        </div>
+        <div class="container-right">
+            <b id="showtdee"></b>
+            <!-- 篩選依據 -->
+            <div class="select">
+                <div class="collapse-choose-list" id="choose-list-item">
+                    <ul class="choose-item-dropdown">
+                        <b class="choose-top dropdown-toggle" data-bs-toggle="dropdown" href="#">篩選依據</b>
+                        <!-- 下拉式選單 -->
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">價格低到高</a></li>
+                            <li><a class="dropdown-item" href="#">價格高到低</a></li>
+                            <li><a class="dropdown-item" href="#">熱量低到高</a></li>
+                            <li><a class="dropdown-item" href="#">熱量高到低</a></li>
+                            <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">商店</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">全家</a></li>
+                                    <li><a class="dropdown-item" href="#">7-11</a></li>
+                                    <li><a class="dropdown-item" href="#">OK</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">食物種類</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">麵</a></li>
+                                    <li><a class="dropdown-item" href="#">飯</a></li>
+                                    <li><a class="dropdown-item" href="#">飯糰</a></li>
+                                    <li><a class="dropdown-item" href="#">麵包</a></li>
+                                    <li><a class="dropdown-item" href="#">肉</a></li>
+                                    <li><a class="dropdown-item" href="#">漢堡</a></li>
+                                    <li><a class="dropdown-item" href="#">三明治</a></li>
+                                    <li><a class="dropdown-item" href="#">沙拉</a></li>
+                                    <li><a class="dropdown-item" href="#">湯</a></li>
+                                    <li><a class="dropdown-item" href="#">甜點</a></li>
+                                    <li><a class="dropdown-item" href="#">其他</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </ul> 
+                </div>
+            </div>
+        </div>
+
+        <!--以上沒問題  -->
+
+        <!-- 這邊是顏家歆寫的可能要改成像昨天那樣的才能輸出資訊 -->
+        <div class="card-sort">
+        </div>
+            <script>
+                $(document).ready(function() {
+                for (let i = 1; i <= 24; i++) {
+                    let cardHtml = `
+                        <div class="card">     
+                            <img src="..." class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title">食品名稱:</h5>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                            <li class="list-group-item">商店: </li>
+                            <div class="list-group-item2">                                  
+                                <div class="row">
+                                    <div class="col">價格:</div>
+                                    <div class="col">熱量:</div>
+                                </div>
+                            </div>
+                            <li class="list-seeMore"> 
+                                <a href="./kcal_count4.html" class="seeMore">See more...</a>
+                            </li>            
+                            </ul>
+                        </div>
+                    `;
+                    $('.card-sort').append(cardHtml);
+                }
+            });
+            </script>
+            <div style="text-align: center; 
+                        margin: 30px;
+                        font-size: 20px;
+            ">
+                <a href="#" id="loadMoreCards" class="see-more-card">-想看更多-</a>
+            </div>
+            <script>
+                $('#loadMoreCards').click(function(event) {
+        event.preventDefault(); 
+
+
+        for (let i = 1; i <= 24; i++) {
+            let cardHtml = `
+                <div class="card">     
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">食品名稱:</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">商店: </li>
+                        <div class="list-group-item2">                                  
+                            <div class="row">
+                                <div class="col">價格:</div>
+                                <div class="col">熱量:</div>
+                            </div>
+                        </div>
+                        <li class="list-seeMore"> 
+                            <a href="./kcal_count4.html" class="seeMore">See more...</a>
+                        </li>            
+                    </ul>
+                </div>
+            `;
+            $('.card-sort').append(cardHtml);
+        }
+    });
+            </script>
+    </div>
+
+    <script src="kcal_little_baby.js"></script>
+</body>
+</html>

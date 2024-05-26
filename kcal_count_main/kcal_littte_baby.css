@@ -1,0 +1,132 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: auto;
+    background-color: rgba(198, 169, 146, 0.2); 
+}
+
+.container-all {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(198, 169, 146, 0.2); 
+}
+
+.container-right {
+    flex-grow: 1;
+    padding: 10px;
+    margin-left: 250px
+}
+
+.second-choose-icon {
+    position: absolute;
+    top: 15px;
+    left: 80%;
+    width: 226px;
+    height: 136px;
+}
+
+ul.list-unstyled {
+    padding-left: 15px; /* 向右移動15px */
+    margin: 0;
+    list-style-type: none;
+    text-align: left; /* 確保項目文字從左到右排列 */
+}
+
+ul.list-unstyled li {
+    padding-left: 0;
+}
+
+li.list-unstyled p.list-item {
+    padding-left: 0; /* 保持項目文字從左邊開始 */
+}
+
+.choose-top {
+    cursor: pointer;
+    color: #876d5a;
+    font-size: 1.7em;
+    z-index: 3;
+    position: absolute;
+    top: 80px;
+    left: 85.7%;
+}
+
+.introduce:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.card-sort{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.card {
+    width: auto;
+    height: 200px;
+    border:2px solid #876d5a4d !important;
+    border-radius: 10px;
+    display: inline-block; 
+    margin: 10px; 
+    flex: 0 0 calc(25% - 20px); 
+}
+
+.card-title{
+    color: #876d5a !important;
+}
+
+.see-more-card{
+    color: #876d5a;
+}
+
+.list-group-item{
+    color: #876d5a !important;
+}
+
+.list-group-item2{
+    color: #876d5a !important;
+    list-style-type: none;
+    margin-left: 15px;
+}
+
+.list-seeMore {
+    list-style-type: none;
+    margin-left: auto;
+    border: none !important; 
+    margin-right: 20px;
+}
+
+.seeMore{
+    color:#876d5a87;
+    text-decoration: none;
+}
+
+.list-group.list-group-flush .list-group-item2 {
+    border: none;
+}
+
+.select li:hover > ul.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+    top: 0%;
+    right: 100%;
+    margin-top: -10px;
+}
+
+.dropdown-menu > li > a:hover:after {
+    transform: rotate(90deg);
+}
