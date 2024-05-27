@@ -17,7 +17,7 @@ function toogleGenderButtonStyle(selectgender) {
     } else if (selectgender === 'girl') {
         girlButton.classList.add("clicked");
         boyButton.classList.remove("clicked");
-        genderfactor=65.5;
+        genderfactor=655;
     }
 }
 
@@ -59,8 +59,8 @@ function submitFormDataAndRedirect(){
     if(genderfactor===66.5){
         BMR=parseFloat(66.5+(13.7*Weight)+(5*Height)-(6.8*Age));
     }
-    else if(genderfactor===65.5){
-        BMR=parseFloat(65.5+(9.6*Weight)+(1.8*Height)-(4.7*Age));
+    else if(genderfactor===655){
+        BMR=parseFloat(655+(9.6*Weight)+(1.8*Height)-(4.7*Age));
     }
 
     TDEE=parseFloat(10*BMR*(1+exerciselevel)/9);

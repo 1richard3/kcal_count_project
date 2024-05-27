@@ -1,22 +1,4 @@
 
-/* .container-all {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    height: auto;
-} */
-
-/* .container-right {
-    background-color: rgba(198, 169, 146, 0.2);
-    margin-left: 250px;
-    padding: 10px; 
-    width: calc(100% - 250px);
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column; 
-    z-index: 998;
-}  */
-
 .container-left {
     background-color: #dabea7;
     width: 250px;
@@ -27,7 +9,7 @@
     left: 0;
     text-align: center;
     overflow-x: hidden;
-    overflow-y: auto; /* 設置垂直滾動 */
+    overflow-y: auto; 
     border-color: #dabea7;
 }
 
@@ -40,7 +22,7 @@
     border-radius: 10px;
     display: flex; 
     flex-direction: column; /* 垂直方向排列 */
-    /* gap: 16px; 設置列之間的間距 */
+    /* gap: 16px;  */
     margin-bottom: 16px; /* 卡片之间的垂直间距 */
     z-index: 999; 
     margin: 10px; 
@@ -101,10 +83,10 @@
 }
 
 ul.list-unstyled {
-    padding-left: 15px; /* 向右移動15px */
+    padding-left: 15px; 
     margin: 0;
     list-style-type: none;
-    text-align: left; /* 確保項目文字從左到右排列 */
+    text-align: left; 
 }
 
 ul.list-unstyled li {
@@ -112,7 +94,7 @@ ul.list-unstyled li {
 }
 
 li.list-unstyled b.list-item {
-    padding-left: 0; /* 保持項目文字從左邊開始 */
+    padding-left: 0; 
 }
 
 .second-top {
@@ -213,7 +195,7 @@ li.list-unstyled b.list-item {
 
 /* cart */
 .container-left .shoppingcart {
-    margin-bottom: 16px; /* 卡片之间的垂直间距 */
+    margin-bottom: 16px; 
     background-color: #F6EFEA;
     width: 250px;
     height: 130px;
@@ -242,7 +224,6 @@ li.list-unstyled b.list-item {
 .container-left .quantity-input {
     width: 40px;
     text-align: center;
-    /* border: none; */
     outline: none;
     font-size: 18px;
 }
@@ -253,4 +234,9 @@ li.list-unstyled b.list-item {
 
 .data-in-cart{
     color: #876d5a;
+}
+
+.like-button {
+    display: inline-block; 
+    margin-top: 5px; 
 }

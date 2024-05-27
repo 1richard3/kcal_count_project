@@ -154,65 +154,6 @@ function FoodwKind(foods, foodKind) {
   return foods.filter(food => food.kind === foodKind);
 }
 
-// 根據輸入的food_ID，新增對應食品的留言(內容為content)
-/*
-let comm = [];
-let commId = 1;
-*/
-function AddComm(foodId) {
-const userInput = document.getElementById('user-input').value;
-// 檢查輸入是否為空
-if (userInput.trim() === "") {
-  alert("評論不能為空");
-  return;
-  }
-
-const newComm = {
-  comm_ID: commId++,
-  foodID: foodId,
-  content: userInput,
-  comm_like: 0 // 預設初始按讚數量為0
-};
-
-comm.push(newComm);
-document.getElementById('user-input').value = '';
-}
-
-// 舉例
-/*
-AddComm('Good', 208);
-
-console.log(comm);
-*/
-
-// 根據輸入的comm_ID，將對應的留言按讚數量+1
-function LikeComm(commId) {
-const comment = comm.find(r => r.comm_ID === commId);
-
-comment.comm_like += 1;
-}
-
-// 舉例
-/*
-LikeComm(1);
-
-console.log(comm);
-*/
-
-// 將某一食品的所有留言根據按讚數量做降冪排序
-function CommByLike(foodId) {
-const comments = comm.filter(review => review.foodID === foodId);
-comments.sort((a, b) => b.like - a.like);
-return comments;
-}
-
-// 將某一食品的所有留言根據評論時間近到遠做排序
-function CommByNew(foodId) {
-const comments = comm.filter(review => review.foodID === foodId);
-comments.sort((a, b) => b.comm_ID - a.comm_ID);
-return comments;
-}
-
 // 顯示食品列表
 function displayFoods(foods) {
 const container = document.querySelector('.container-card');
@@ -221,6 +162,9 @@ foods.forEach(food => {
   generateCard(food.name, food.cs, food.price, food.Kcal, food.img, food.foodID);
 });
 }
+
+// 儲存用戶是否按讚過食品
+const likedFoods = {};
 
 function generateCard(name1, store, price, calories, img, foodID) {
   var cardHtml = `
@@ -243,7 +187,15 @@ function generateCard(name1, store, price, calories, img, foodID) {
                       <div class="col">熱量: ${calories} kcal</div>
                   </div>
               </li>
-              <li class="list-group-item">商店: ${store}</li>
+              <li class="list-group-item">
+                  <div class="row align-items-center"> <!-- 将内容垂直居中对齐 -->
+                      <div class="col">商店: ${store} </div>
+                      <div class="col-auto"> <!-- 使用 col-auto 让按钮跟随内容宽度 -->
+                          <button id="like-button" class="btn btn-primary " data-food-id="${foodID}" ${likedFoods[foodID] ? 'disabled' : ''}>Like</button>
+                      </div>
+                  </div>
+              </li>
+              
               <li class="list-seeMore"> 
                   <a href="./kcal_count3.html?foodID=${foodID}" class="seeMore">See more...</a>
               </li>            
@@ -252,4 +204,50 @@ function generateCard(name1, store, price, calories, img, foodID) {
   `;
   $('.container-card').append(cardHtml);
 }
+
+
+document.addEventListener('click', function(event) {
+  if (event.target.classList.contains('like-button')) {
+      const foodId = event.target.dataset.foodId;
+
+      addLike(foodId);
+
+      event.target.disabled = true;
+      likedFoods[foodId] = true;
+  }
+});
+
+// 將 foods 陣列存儲到 localStorage
+function saveFoods() {
+  localStorage.setItem('foods', JSON.stringify(foods));
+}
+
+// 從 localStorage 獲取 foods 陣列
+function loadFoods() {
+  const storedFoods = localStorage.getItem('foods');
+  if (storedFoods) {
+      foods = JSON.parse(storedFoods);
+  }
+}
+
+
+// 增加按讚數量的函數
+function addLike(foodId) {
+  loadFoods(); 
+  // 找到對應食品
+  const food = foods.find(food => food.foodID === parseInt(foodId));
+  if (food) {
+      // 增加按讚數量
+      food.like += 1;
+      saveFoods();
+      console.log('success');
+  }
+}
+
+// 選出按讚過的食品
+function FoodByLike(foods) {
+  return foods.filter(food => food.like > 0);
+}
+
+loadFoods();
 displayFoods(foods);

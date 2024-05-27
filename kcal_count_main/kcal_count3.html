@@ -3,23 +3,18 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="student" content="111403549 呂紹晨">
-    <title> kcal_count presrent4 </title>
-    <!-- <link rel="stylesheet" href="./stylesheets/all.css" > -->
+    <title>kcal_count presrent4</title>
     <link rel="stylesheet" href="kcal_count3.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
 </head>
-
 <style>
     body {
-        background-color: rgba(198, 169, 146, 0.2); /* 使用 rgba 來設定顏色和透明度 */
+        background-color: rgba(198, 169, 146, 0.2); 
     }
 </style>
-
 <body>
-
     <div id="food-details"></div>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -29,24 +24,26 @@
         });
 
         function displayFoodDetails(foodID) {
-    // 在 foods 陣列中查找與 foodID 相符的食品
-    const food = foods.find(item => item.foodID === parseInt(foodID));
+            const food = foods.find(item => item.foodID === parseInt(foodID));
 
-    if (food) {
-        document.querySelector('.image-description').innerHTML = `
-            <img src="${food.img}" class="product-image" alt="${food.name}">
-            <p>【商品名稱】：${food.name}</p>
-            <p>【價格】：${food.price} 元</p>
-            <p>【便利商店】：${food.cs}</p>
-            <p>【熱量】：${food.Kcal} kcal</p>
-        `;}}
+            if (food) {
+                document.querySelector('.image-description').innerHTML = `
+                    <img src="${food.img}" class="product-image" alt="${food.name}">
+                    <p>【商品名稱】：${food.name}</p>
+                    <p>【價格】：${food.price} 元</p>
+                    <p>【便利商店】：${food.cs}</p>
+                    <p>【熱量】：${food.Kcal} kcal</p>
+                `;
+            }
+        }
     </script>
 
     <div>
         <img src="../elements/Group 6.png" class="forth-top">
     </div>
+
     <div class="container">
-        <div class="button-container">      <!--按鈕連回前一頁-->
+        <div class="button-container">
             <button class="btn btn-primary" id="goBackButton">
                 <img src="../elements/return.png" class="return-img" alt="圖片">
                 看看其他食物
@@ -58,7 +55,11 @@
                                          【便利商店】：<br>
                                          【熱量】：</p>
         </div>
-        <div class="input-container">   <!--這裡讓人可以輸入評論-->
+        
+        <div class="scrollable-table">
+            <div id="comments-container"></div>
+        </div>
+        <div class="input-container">
             <input 
                 class="input-comment"
                 type="text" 
@@ -66,9 +67,9 @@
                 name="user-input" 
                 placeholder="輸入你的評論..."
             >
-            <button type="button" class="addcomment" onclick="addComment()"><b>提交</b></button>
-            <!--<button onclick="addComment()">上傳評論</button>-->
+            <button type="button" class="btn btn-success" id="submitComment">備註</button>
         </div>
+
     </div>
     <script src="fooddata.js"></script>
     <script src="kcal_count3.js"></script>
