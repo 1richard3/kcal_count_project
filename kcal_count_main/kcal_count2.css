@@ -14,8 +14,7 @@
 }
 
 .card {
-    flex: 1 1 calc(25% - 16px);
-    width: 250px; 
+    width: 350px; 
     height: 200px;
     border:2px solid #876d5a4d !important;
     border-color: #876d5a;

@@ -179,23 +179,18 @@ function generateCard(name1, store, price, calories, img, foodID) {
           </div>
           <div class="card-body">
               <h5 class="card-title">食品名稱: ${name1}</h5>
+              <div class="row">
+                  <div class="col">價格: ${price} 元</div>
+                  <div class="col">熱量: ${calories} kcal</div>
+              </div>
+              <div class="row">
+                  <div class="col">商店: ${store}</div>
+                  <div class="col">
+                    <button class="btn btn-primary btn-sm like-button" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" data-food-id="${foodID}" ${likedFoods[foodID] ? 'disabled' : ''}>Like</button>
+                  </div>
+              </div>
           </div>
           <ul class="list-group list-group-flush">
-              <li class="list-group-item2">                                  
-                  <div class="row">
-                      <div class="col">價格: ${price} 元</div>
-                      <div class="col">熱量: ${calories} kcal</div>
-                  </div>
-              </li>
-              <li class="list-group-item">
-                  <div class="row align-items-center"> <!-- 将内容垂直居中对齐 -->
-                      <div class="col">商店: ${store} </div>
-                      <div class="col-auto"> <!-- 使用 col-auto 让按钮跟随内容宽度 -->
-                          <button id="like-button" class="btn btn-primary " data-food-id="${foodID}" ${likedFoods[foodID] ? 'disabled' : ''}>Like</button>
-                      </div>
-                  </div>
-              </li>
-              
               <li class="list-seeMore"> 
                   <a href="./kcal_count3.html?foodID=${foodID}" class="seeMore">See more...</a>
               </li>            
@@ -204,6 +199,7 @@ function generateCard(name1, store, price, calories, img, foodID) {
   `;
   $('.container-card').append(cardHtml);
 }
+
 
 
 document.addEventListener('click', function(event) {
