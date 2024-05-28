@@ -1,4 +1,3 @@
-
 var genderfactor=0;
 var exerciselevel=0;
 var BMR=0;
